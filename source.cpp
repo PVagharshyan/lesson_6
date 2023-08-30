@@ -40,7 +40,7 @@ std::ostream& operator<<(std::ostream& out, const Spreadsheet& obj) {
     size_t max_size_of_value = 0;
     for (size_t i {}; i < obj.getRow(); ++i) {
         for (size_t j {}; j < obj.getColumn(); ++j) {
-            std::string current_SpreadsheetCell_value = obj.getCell(j, i)->getValue();
+            std::string current_SpreadsheetCell_value = obj.getCell(i, j)->getValue();
             if (max_size_of_value < current_SpreadsheetCell_value.size()) {
                 max_size_of_value = current_SpreadsheetCell_value.size();
             }
